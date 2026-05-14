@@ -50,58 +50,34 @@ xmlns:core="sap.ui.core">
 
     <table:Table
         id="idTable"
-        rows="{/orders}"
-        visibleRowCount="8"
         class="sapUiSmallMarginTop">
         <table:columns>
 
             <table:Column>
                 <Label text="WBS Element"/>
                 <table:template>
-                    <Text text="{wbs}"/>
+                    <Text text="{WBSElement}"/>
                 </table:template>
             </table:Column>
 
             <table:Column>
                 <Label text="Description"/>
                 <table:template>
-                    <Text text="{desc}"/>
+                    <Text text="{WBSDescription}"/>
                 </table:template>
             </table:Column>
 
             <table:Column>
                 <Label text="Order No"/>
                 <table:template>
-                    <Text text="{orderNo}"/>
+                    <Text text="{HeaderMaterial}"/>
                 </table:template>
             </table:Column>
 
             <table:Column>
                 <Label text="Quantity"/>
                 <table:template>
-                    <Text text="{qty}"/>
-                </table:template>
-            </table:Column>
-           <table:Column>
-                <Label text="Header"/>
-                <table:template>
-                    <Text text="{header}"/>
-                </table:template>
-            </table:Column>
-
-            <table:Column>
-                <Label text="Status"/>
-                <table:template>
-                    <ObjectStatus text="{status}"/>
-                </table:template>
-            </table:Column>
-
-            <table:Column>
-                <Label text="Completion %"/>
-                <table:template>
-                    <ProgressIndicator
-                        percentValue="{percent}"
-                        displayValue="{percent}%"/>
+                    <Text text="{QuantityUnit}"/>
                 </table:template>
             </table:Column>
 

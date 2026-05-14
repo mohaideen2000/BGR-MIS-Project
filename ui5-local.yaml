@@ -29,3 +29,16 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /sap/opu/odata4/sap/zcb_sb_project_mis1/srvd/sap/zcb_sd_project_mis1/0001/
+            url: https://my409314-api.s4hana.cloud.sap
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata4/sap/zcb_sb_project_mis1/srvd/sap/zcb_sd_project_mis1/0001
+            metadataPath: ./webapp/localService/mainService/metadata.xml
+            mockdataPath: ./webapp/localService/mainService/data
+            generateMockData: true
+        annotations: []
